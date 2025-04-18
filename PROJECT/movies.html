@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+         function fun1() {
+        alert("Download Started! Please Wait for sometimes.");
+    }
+    document.addEventListener("DOMContentLoaded",function(){
+        let filterButtons = document.querySelectorAll(".filter-btn");
+        let cards = document.querySelectorAll(".card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click",function(){
+                filterButtons.forEach(btn=>btn.classList.remove("active"));
+                this.classList.add("active");
+
+                let filterValue = this.getAttribute("data-category");
+
+                cards.forEach(card => {
+                    if(filterValue === "all" || card.getAttribute("data-category") === filterValue){
+                        card.classList.remove("hide");
+                    }else{
+                        card.classList.add("hide");
+                    }
+                });
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <div>
+        <nav>
+            <span><img width="53" src="assets/logo.svg" alt="h"></span>
+            <div>
+                <a href="index.html"><button class="btn">Home</button></a> 
+                <button class="btn">TV shows</button>
+                <a href="form.html"><button class="btn red-sm">sign in</button></a>
+                <button class="btn">English</button>
+                <button class="btn" onclick="fun1()"><i class="fa-regular fa-circle-down"
+                    style="margin-right:5px;"></i>Install App</button>
+            </div>
+        </nav>
+        <div class="category-filter" id="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="action">Action</button>
+            <button class="filter-btn" data-category="comedy">Comedy</button>
+            <button class="filter-btn" data-category="drama">Drama</button>
+            <button class="filter-btn" data-category="sci-fi">Sci-Fi</button>
+            <button class="filter-btn" data-category="horror">Horror</button>
+            <button class="filter-btn" data-category="documentary">Documentary</button>
+    </div>
+        <h1 class="h4" style="text-align: center; color: red;">MOVIES</h1>
+        <div class="card-container">
+   
+            <div class="card"  data-category="action">
+                <a href="trailer1.html"><img src="assets/m16.jpg" class="card-img"></a>
+                <h1 class="card-title">Red Notice</h1> <!-- Replace with movie title -->
+               <p class="card-info">Year: 2021</p> <!-- Replace with movie release year -->
+               <p class="card-info">Genre: Action</p> <!-- Replace with movie genre -->
+               <p class="card-info">Duration: 1h 18m</p> <!-- Replace with movie duration -->
+               <p class="card-info">Summary: In the world of international crime, an Interpol agent attempts to hunt down and capture the world's most wanted art thief.</p>
+              
+            </div>
+    
+            <div class="card" data-category="drama">
+                <a href="trailer1.html"><img src="Assets/m20.jpg" class="card-img"></a>
+                <h1 class="card-title">Uncharted</h1> 
+               <p class="card-info">Year: 2022</p> 
+               <p class="card-info">Genre: Drama,</p> 
+               <p class="card-info">Duration: 1h 56m</p> 
+               <p class="card-info">Summary:Treasure hunter Victor "Sully" Sullivan recruits street-smart Nathan Drake to help him recover a 500-year-old lost fortune amassed by explorer Ferdinand Magellan.</p>
+            </div>
+    
+            <div class="card" data-category="drama">
+                <a href="trailer1.html"><img src="assets/m21.jpg" class="card-img"></a>
+                <h1 class="card-title">The Sabarmati Report</h1>
+               <p class="card-info">Year: 2024</p> 
+               <p class="card-info">Genre: Drama</p> 
+               <p class="card-info">Duration: 2h 02m</p> 
+               <p class="card-info">Summary:A journalist investigates the 2002 Godhra train burning in Gujarat. Years later, another reporter discovers his hidden report.</p>
+            </div>
+    
+            <div class="card" data-category="action" >
+                <a href="trailer1.html"><img src="assets/m22.jpg" class="card-img"></a>
+                <h1 class="card-title">HIT: The Third Case</h1> 
+               <p class="card-info">Year: 2025</p> 
+               <p class="card-info">Genre: Action, Thriller</p> 
+               <p class="card-info">Duration: 2h 30m</p>
+               <p class="card-info">Summary:Arjun Sarkaar, an SP in HIT at Visakhapatnam, gets assigned to a case for HIT in Jammu and Kashmir to catch a group of serial killers who are responsible for the gruesome murders of several people.</p>
+               
+            </div>
+            
+            <div class="card" data-category="sci-fi" >
+                <a href="trailer1.html"><img src="assets/m23.jpeg" class="card-img" ></a>
+                <h1 class="card-title">Arrival</h1>
+                <p class="card-info">Year: 2016</p>
+                <p class="card-info">Genre: sci-fi</p>
+                <p class="card-info">Duration: 1h 56m</p> 
+              <p class="card-info">Summary:The film stars Amy Adams as Louise Banks, a linguist enlisted by the United States Army to discover how to communicate with extraterrestrials.</p>
+              
+           </div>  
+    
+           <div class="card" data-category="horror" >
+            <a href="trailer1.html"><img src="assets/m24.jpg" class="card-img" ></a>
+            <h1 class="card-title">Bhool Bhulaiyaa 3</h1>
+            <p class="card-info">Year: 2024</p>
+            <p class="card-info">Genre: horror</p>
+            <p class="card-info">Duration: 2h 38m</p> 
+          <p class="card-info">Summary:An NRI and his wife decide to stay in his ancestral home, paying no heed to the warnings about ghosts.</p>
+          
+          </div> 
+          <div class="card"  data-category="horror">
+            <a href="trailer1.html"><img src="assets/m25.jpeg" class="card-img"></a>
+            <h1 class="card-title">Tumbbad</h1> 
+           <p class="card-info">Year: 2018</p> 
+           <p class="card-info">Genre:Horror</p>
+           <p class="card-info">Duration: 1h 44m</p>
+           <p class="card-info">Summary: When a family builds a shrine for Hastar, a monster who is never to be worshipped, and attempts to get their hands on his cursed wealth, they face catastrophic consequences.</p>
+          
+        </div>
+        <div class="card"  data-category="comedy">
+            <a href="trailer1.html"><img src="assets/m26.jpg" class="card-img"></a>
+            <h1 class="card-title">Phir Hera Pheri</h1> 
+           <p class="card-info">Year: 2006</p> 
+           <p class="card-info">Genre:comedy</p> 
+           <p class="card-info">Duration: 2h 33m</p> 
+           <p class="card-info">Summary: A twist of fate changes the lives of Raju, Shyam and Baburao when they get cheated by a fraudster. </p>
+          
+        </div>
+        <div class="card"  data-category="comedy">
+            <a href="trailer1.html"><img src="assets/m27.jpeg" class="card-img"></a>
+            <h1 class="card-title">Golmaal 3</h1> 
+           <p class="card-info">Year: 2010</p> 
+           <p class="card-info">Genre: Comedy</p> 
+           <p class="card-info">Duration: 2h 35m</p> 
+           <p class="card-info">Summary:Cupid strikes when Pritam, a single father, comes across his college sweetheart, Geeta, in Goa.</p>
+          
+        </div>
+        <div class="card"  data-category="sci-fi">
+            <a href="trailer1.html"><img src="assets/m28.jpeg" class="card-img"></a>
+            <h1 class="card-title">Interstellar</h1>
+           <p class="card-info">Year: 2014</p> 
+           <p class="card-info">Genre: sci-fi, Adventure</p> 
+           <p class="card-info">Duration: 2h 49m</p> 
+           <p class="card-info">Summary: In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. </p>
+          
+        </div>
+        <div class="card"  data-category="horror">
+            <a href="trailer1.html"><img src="assets/m29.jpeg" class="card-img"></a>
+            <h1 class="card-title">Smile</h1>
+           <p class="card-info">Year: 2022</p>
+           <p class="card-info">Genre: Horror,Mystery</p>
+           <p class="card-info">Duration: 1h 55m</p> 
+           <p class="card-info">Summary:After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. </p>
+          
+        </div>
+        <div class="card"  data-category="action">
+            <a href="trailer1.html"><img src="assets/m30.jpg" class="card-img"></a>
+            <h1 class="card-title">Eagle</h1>
+           <p class="card-info">Year: 2024</p> 
+           <p class="card-info">Genre: Action, Thriller</p> 
+           <p class="card-info">Duration: 2h 36m</p> 
+           <p class="card-info">Summary: A journalist uncovers the story of a ruthless assassin when she investigates a government cover up.</p>
+          
+        </div>
+        </div>
+        <footer class="container">
+            <img width="53px" height="53" src="assets/logo.svg" alt="not">
+            <ul class="legal-list">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Privacy Center</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">About Ads</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <p class="copyright">&copy; 2025 Netflix</p>
+                <br><br>
+            </ul>
+        </footer>
+           
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Trailer - Netflix India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    window.onload=function(){
+        let button=document.getElementById("bt");
+        button.addEventListener("click",function(){
+            alert("Download Started! Please Wait for sometimes.");
+        });
+    };
+</script>
+</head>
+
+<body>
+
+    <nav>
+        <span><img width="53" src="assets/logo.svg" alt="Logo"></span>
+        <div>
+           <a href="index.html"><button class="btn">Home</button></a> 
+            <button class="btn">Movies</button>
+            <button class="btn">TV shows</button>
+            <a href="form.html"><button class="btn red-sm">sign in</button></a>
+            <button class="btn">English</button>
+        </div>
+    </nav>
+    <div>
+        <h3 style="color:wheat; text-align: center;">Watch Trailer</h3>
+        <!-- Embed the demo video -->
+        <video width="90%" height="90%" controls autoplay style="margin-left: 5%;">
+            <source src="assets\trailer1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div>
+        <button class="btn" id="bt" style="margin-left: 6%;"><i class="fa-regular fa-circle-down"
+            style="margin-right:5px;"></i>Download Trailar</button>
+    </div>
+    <footer class="container">
+        <img width="53px" height="53" src="assets/logo.svg" alt="not">
+        <ul class="legal-list">
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Privacy Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">About Ads</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <p class="copyright">&copy; 2025 Netflix</p>
+            <br><br>
+        </ul>
+    </footer>
+
+</body>
+</html>

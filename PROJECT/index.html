@@ -1,0 +1,310 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix india watch tv shows online,watch movies online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script>
+    function fun1() {
+        alert("Download Started! Please Wait for sometimes.");
+    }
+
+    document.addEventListener("DOMContentLoaded",function(){
+        let filterButtons = document.querySelectorAll(".filter-btn");
+        let cards = document.querySelectorAll(".card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click",function(){
+                filterButtons.forEach(btn=>btn.classList.remove("active"));
+                this.classList.add("active");
+
+                let filterValue = this.getAttribute("data-category");
+
+                cards.forEach(card => {
+                    if(filterValue === "all" || card.getAttribute("data-category") === filterValue){
+                        card.classList.remove("hide");
+                    }else{
+                        card.classList.add("hide");
+                    }
+                });
+            });
+        });
+    });
+    
+</script>
+</head>
+
+
+<body>
+    <div class="main"> 
+        <nav>
+        <span><img  width="53" src="assets/logo.svg"  alt="h"></span>
+        <div>
+            <a href="index.html"><button class="btn">Home</button></a> 
+            <a href="movies.html"><button class="btn">Movies</button></a>
+            <button class="btn">TV shows</button>
+            <a href="form.html"><button class="btn red-sm">sign in</button></a>
+            <button class="btn">English</button>
+            <button class="btn" onclick="fun1()"><i class="fa-regular fa-circle-down"
+                style="margin-right:5px;"></i>Install App</button>
+            </div>
+        </nav>
+        <div class="box">
+        </div>
+        <div class="hero">
+            <span>Unlimited movies,
+                TV shows and more
+                Starts at ₹149.</span>
+            <span>Cancel at any time.</span>
+            <span>Ready to watch? Enter your email to create or restart your membership.</span>
+
+            <div class="hero-buttons">
+                <input type="email" placeholder="email address">
+                <a href="form.html"><button class="btn btn-red" type="submit">get started &gt;</button></a>
+
+            </div>
+        </div>
+</div>
+    <div class="category-filter" id="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="action">Action</button>
+            <button class="filter-btn" data-category="comedy">Comedy</button>
+            <button class="filter-btn" data-category="drama">Drama</button>
+            <button class="filter-btn" data-category="sci-fi">Sci-Fi</button>
+            <button class="filter-btn" data-category="horror">Horror</button>
+            <button class="filter-btn" data-category="documentary">Documentary</button>
+    </div>
+    <h1 class="h4">TRENDING NOW</h1>
+    <div class="card-container">
+   
+        <div class="card"  data-category="drama">
+            <a href="trailer.html"><img src="assets/m1.jpg" class="card-img"></a>
+            <h1 class="card-title">Test</h1> <!-- Replace with movie title -->
+           <p class="card-info">Year: 2025</p> <!-- Replace with movie release year -->
+           <p class="card-info">Genre: Drama, Motivation</p> <!-- Replace with movie genre -->
+           <p class="card-info">Duration: 2h 15m</p> <!-- Replace with movie duration -->
+           <p class="card-info">Summary: Three People witness their worlds collide during a legendery international cricket test match in chennai.</p>
+          
+        </div>
+
+        <div class="card" data-category="comedy">
+            <a href="trailer.html"><img src="Assets/m2.jpg" class="card-img"></a>
+            <h1 class="card-title">Dragon</h1> 
+           <p class="card-info">Year: 2025</p> 
+           <p class="card-info">Genre: Comedy, Drama, Romance</p> 
+           <p class="card-info">Duration: 2h 20m</p> 
+           <p class="card-info">Summary: As a college student, watching Dragon felt like someone had peeked into my life and turned it into a movie only way more entertaining and heartfelt.</p>
+        </div>
+
+        <div class="card" data-category="action">
+            <a href="trailer.html"><img src="assets/m3.jpg" class="card-img"></a>
+            <h1 class="card-title">Deva</h1>
+           <p class="card-info">Year: 2025</p> 
+           <p class="card-info">Genre: Action, Drama</p> 
+           <p class="card-info">Duration: 2h 02m</p> 
+           <p class="card-info">Summary: A brilliant yet rebellious police officer uncovers a web of deceit and betrayal while investigating a high-profile case.</p>
+        </div>
+
+        <div class="card" data-category="action" >
+            <a href="trailer.html"><img src="assets/m4.jpg" class="card-img"></a>
+            <h1 class="card-title">Pushpa 2</h1> 
+           <p class="card-info">Year: 2024</p> 
+           <p class="card-info">Genre: Action, Thriller</p> 
+           <p class="card-info">Duration: 3h 5m</p>
+           <p class="card-info">Summary: A smuggling kingpin faces off against a vengeful rival while manipulating politics,making big deals, and navigating tense confrontations.</p>
+           
+        </div>
+        
+        <div class="card" data-category="drama" >
+            <a href="trailer.html"><img src="assets/m11.jpg" class="card-img" ></a>
+            <h1 class="card-title">Chhaava</h1>
+            <p class="card-info">Year: 2025</p>
+            <p class="card-info">Genre: Action, Drama</p>
+            <p class="card-info">Duration: 2h 35m</p> 
+          <p class="card-info">Summary:Shivaji's death sparks the Maratha-Mughal conflict. His son Sambhaji leads resistance against Aurangzeb's forces. Amid battles and intrigue, both sides face challenges in a struggle for power.</p>
+          
+       </div>  
+
+       <div class="card" data-category="comedy" >
+        <a href="trailer.html"><img src="assets/m18.jpg" class="card-img" ></a>
+        <h1 class="card-title">Mad</h1>
+        <p class="card-info">Year: 2025</p>
+        <p class="card-info">Genre: comedy, Drama</p>
+        <p class="card-info">Duration: 2h 07m</p> 
+      <p class="card-info">Summary:A group of friends who study Engineering at an Indian university try to achieve success in their studies and love.</p>
+      
+   </div> 
+    </div>
+    <h2 class="h4">POPULAR ON NETFLIX</h2>
+    <div class="card-container">
+        <div class="card" data-category="horror" >
+            <a href="trailer.html"><img src="assets/m5.jpg" class="card-img"></a>
+            <h1 class="card-title">Officer On duty</h1>
+            <p class="card-info">Year: 2025</p>
+            <p class="card-info">Genre: Crime Drama</p>
+            <p class="card-info">Duration: 2h 25m</p> 
+            <p class="card-info">Summary: A demoted police inspector investigates a counterfeit jewelry racket, becomig entangled in a dangerous web of crime that puts this life at stake.</p>
+            
+        </div>
+        <div class="card" data-category="action" >
+            <a href="trailer.html"><img src="assets/m6.jpg" class="card-img"></a>
+            <h1 class="card-title">Khakee</h1>
+            <p class="card-info">Year: 2004</p>
+            <p class="card-info">Genre: Action Crime</p>
+            <p class="card-info">Duration: 2h 15m</p> 
+            <p class="card-info">Summary: A team of police force esports an alleged terroist from Chandigarh to Mumbai.</p>
+            
+        </div>  <div class="card" data-category="drama" >
+            <a href="trailer.html"><img src="assets/m7.jpg" class="card-img"></a>
+            <h1 class="card-title">Squid Game</h1>
+            <p class="card-info">Year: 2021</p>
+            <p class="card-info">Genre: Action Game </p>
+            <p class="card-info">Duration: 2h 30m</p> 
+            <p class="card-info">Summary: hundreds of cash-strapped players accept a strange invitation to complete in children's game.</p>
+            
+        </div>  <div class="card" data-category="comedy">
+            <a href="trailer.html"><img src="assets/m8.jpg" class="card-img"></a>
+            <h1 class="card-title">Raw</h1>
+            <p class="card-info">Year: 2017</p>
+            <p class="card-info">Genre: Action Comedy</p>
+            <p class="card-info">Duration: 2h 20m</p> 
+           <p class="card-info">Summary: A young Women studying to be a vet, devlopes a craving for human flesh.</p>
+           
+        </div>  <div class="card"  data-category="sci-fi">
+            <a href="trailer.html"><img src="assets/m9.jpg" class="card-img"></a>
+            <h1 class="card-title">Karma</h1>
+            <p class="card-info">Year: 2024</p>
+            <p class="card-info">Genre: Action, Mystery, Thriller</p>
+            <p class="card-info">Duration: 2h 01m</p> 
+            <p class="card-info">Summary: Stranded in a remote graveyard special investigation officer Amar Patnaik uncovers chilling secrets.</p>
+            
+        </div>
+    </div>
+    <h2 class="h4">CONTINUE WATCHING</h2>
+    <div class="card-container">
+        <div class="card" data-category="action" >
+            <a href="trailer.html"><img src="assets/m10.jpg" class="card-img"></a>
+            <h1 class="card-title">Vidaamuyarchi</h1>
+            <p class="card-info">Year: 2025</p>
+            <p class="card-info">Genre: Action, Drama</p>
+            <p class="card-info">Duration: 2h 02m</p> 
+            <p class="card-info">Summary: A brilliant yet rebellious police officer uncovers a web of deceit and betrayal while investigating a high-profile case.</p>
+            
+        </div> 
+           <div class="card" data-category="drama" >
+               <a href="trailer.html"><img src="assets/m13.jpg" class="card-img"></a>
+               <h1 class="card-title">Resident Playbook</h1> 
+              <p class="card-info">Year: 2025</p> 
+              <p class="card-info">Genre: Drama, Thriller</p> ->
+              <p class="card-info">Duration: 3h 5m</p>
+              <p class="card-info">Summary: A smuggling kingpin faces off against a vengeful rival while manipulating politics,making big deals, and navigating tense confrontations.</p>
+              
+           </div>
+        <div class="card" data-category="sci-fi">
+            <a href="trailer.html"><img src="assets/m12.jpg" class="card-img" ></a>
+            <h1 class="card-title">Court </h1>
+           <p class="card-info">Year: 2025</p>
+           <p class="card-info">Genre: sci-fi</p>
+           <p class="card-info">Duration: 2h 25m</p> 
+           <p class="card-info">Summary:A team of police force esports an alleged terroist from Chandigarh to Mumbai.</p>
+          
+        </div>  
+        <div class="card" data-category="action">
+            <a href="trailer.html"><img src="assets/m14.jpg" class="card-img"></a>
+            <h1 class="card-title">K.G.F: Chapter 2</h1>
+           <p class="card-info">Year: 2022</p>
+           <p class="card-info">Genre: Action Crime</p>
+           <p class="card-info">Duration: 2h 15m</p> 
+           <p class="card-info">Summary: The blood-soaked land of Kolar Gold Fields has a new overlord now, Rocky, whose name strikes fear in the heart of his foes.</p>
+          
+        </div>  
+        <div class="card" data-category="horror">
+            <a href="trailer.html"><img src="assets/m17.jpg" class="card-img"></a>
+            <h1 class="card-title">Bulbbul</h1>
+           <p class="card-info">Year: 2020</p>
+           <p class="card-info">Genre: Horror</p>
+           <p class="card-info">Duration: 1h 34m</p> 
+           <p class="card-info">Summary:A child bride grows into an enigmatic woman ruling over her household, hiding her painful past, as supernatural murders of men plague her village.</p>
+          
+        </div>
+        <div class="card" data-category="comedy">
+            <a href="trailer.html"><img src="assets/m19.jpg" class="card-img"></a>
+            <h1 class="card-title">Kakuda</h1>
+           <p class="card-info">Year: 2024</p>
+           <p class="card-info">Genre: comedy</p>
+           <p class="card-info">Duration: 1h 56m</p> 
+           <p class="card-info">Summary:Sunny is a resident of Rathodi, a village haunted by a resentful spirit. When a small mistake causes Sunny to be cursed, he approaches a ghost hunter to find a solution.</p>
+          
+        </div>
+        
+    </div>
+
+    <br><br><br><br>
+
+    
+    <div class="grid-container">
+        <div class="grid-item">
+            <ul>
+                    <a href="team.html"><li>About Our Team</li></a>
+                    <li>Investor Relations</li>
+                    <li>Privacy</li>
+                    <li>Speed Test</li>
+                </ul>
+            </div>
+            
+            <div class="grid-item">
+                <ul>
+                    <li>Help Centre</li>
+                    <li>Jobs</li>
+                    <li>Cookie Preferences</li>
+                    <li>Legal Notices</li>
+                </ul>
+            </div>
+            
+            <div class="grid-item">
+                <ul>
+                    <li>Account</li>
+                    <li>Ways to Watch</li>
+                    <li>Corporate Information</li>
+                    <li>Only on Netflix</li>
+                </ul>
+            </div>
+            
+            <div class="grid-item">
+                <ul>
+                    <li>Terms of Use</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/netflix_in?igsh=NDVtcnpxcHozNmVq"><i class="fa-brands fa-instagram "> </i></a>
+                    <a href="https://www.facebook.com/share/18U1LADwXm/?mibextid=wwXIfr"><i class="fa-brands fa-facebook "> </i></a>
+                    <a href="https://youtube.com/@chodvadiyafamilyvlog?si=9CJjOGWkdq4GhaXY"><i class="fa-brands fa-youtube"> </i></a>
+                   <a href="https://x.com/NetflixIndia?t=qlEUpZR0AR95BPB-u0FxPw&s=08 "><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    <footer class="container">
+        <img width="53px" height="53" src="assets/logo.svg" alt="not">
+        <ul class="legal-list">
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Privacy Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">About Ads</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <p class="copyright">&copy; 2025 Netflix</p>
+            <br><br>
+        </ul>
+    </footer>
+       
+    </body>
+    
+    </html>
